@@ -8,25 +8,5 @@
       <excludeFolder url="file://$MODULE_DIR$/.aws-sam" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.7 (sam-test2)" jdkType="Python SDK" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-  <component name="TestRunnerService">
-    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
-  </component>
-  <component name="deploySettings">
-    <option name="samConfigs">
-      <map>
-        <entry key="template.yaml">
-          <value>
-            <DeploySamConfig>
-              <option name="autoExecute" value="true" />
-              <option name="bucketName" value="hogee" />
-              <option name="stackName" value="sam-test2" />
-            </DeploySamConfig>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </module>
