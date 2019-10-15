@@ -4,9 +4,11 @@
 
 ### 機能別のコード
 
-コントローラの位置づけに当たる層を、階層名(lambda_functions)/Function名（function1）/app.pyとする。  
+コントローラの位置づけに当たる層を、トップ(lambda_functions)/Function名（function1）/相対import対策(fn)/app.pyとする。  
 app.py内で機能ごとに任意の関数を生成し、template.yaml内でハンドラとして指定する。  
 機能ごとの固有のコード（再利用を意識しなくて良いコード）がある場合、この中に作成する。  
+
+app.py内で相対importを使用できるようにするため、fnディレクトリを挟む。  
 
 template.yamlのCodeUriに指定するのはこの階層にする。  
 そのため、この階層にrequirements.txtを配置する必要があるが、中身は空にすること。  
