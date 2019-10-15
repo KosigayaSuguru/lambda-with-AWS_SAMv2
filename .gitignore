@@ -47,12 +47,19 @@ Temporary Items
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
-.idea
-
 # User-specific stuff:
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
+
+.idea/**/inspectionProfiles
+.idea/**/aws.xml
+.idea/**/misc.xml
+.idea/**/modules.xml
+# .idea/**/sam-test.iml
+.idea/**/saveactions_settings.xml
+.idea/**/vcs.xml
+.idea/**/workspace.xml
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
