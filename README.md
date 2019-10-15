@@ -5,10 +5,11 @@
 ### 機能別のコード
 
 コントローラの位置づけに当たる層を、階層名(lambda_functions)/Function名（function1）/app.pyとする。  
-app.py内で機能ごとに任意の関数を生成し、tmmplate.yaml内でハンドラとして指定する。  
+app.py内で機能ごとに任意の関数を生成し、template.yaml内でハンドラとして指定する。  
 機能ごとの固有のコード（再利用を意識しなくて良いコード）がある場合、この中に作成する。  
 
-ハンドラが存在するため、この階層にrequirements.txtを配置する必要があるが、中身は空にすること。  
+template.yamlのCodeUriに指定するのはこの階層にする。  
+そのため、この階層にrequirements.txtを配置する必要があるが、中身は空にすること。  
 ライブラリが必要となる場合、プロジェクトルートのrequirements.txtに記載する。  
 ※詳細は "共通ライブラリ" 参照
 
