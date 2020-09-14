@@ -14,7 +14,7 @@ def lambda_handler1(event, context):
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": "hello world",
+            "message": "hello world on lambda_handler1",
         }),
     }
 
@@ -25,6 +25,6 @@ def lambda_handler2(event, context):
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": "hello world",
+            "message": "hello world on lambda_handler2",
         }),
     }
