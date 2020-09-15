@@ -40,3 +40,17 @@ template.yamlのCodeUriに指定するのはこの階層にする。
 CI/CDする場合、CI/CD用のビルドを行う環境で、 ↓を行うこと。
 * venvの作成
 * `pip install -r requirements.txt`
+
+## 動作確認用コンテナ
+
+```
+cd docker
+docker-compose up
+docker-compose rm -fs
+```
+
+### MySQL
+
+* ポート`33306`で待ち受け（一応、`docker-compose.yaml`内を参照）。
+* `docker\mysql-init`内にDB初期化用のSQLを配置してある。
+* 一回`docker-compose up`後、`mysql-local-data`内にMySQLのデータが保持される。
