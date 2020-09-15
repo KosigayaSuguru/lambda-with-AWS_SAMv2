@@ -54,3 +54,12 @@ docker-compose rm -fs
 * ポート`33306`で待ち受け（一応、`docker-compose.yaml`内を参照）。
 * `docker\mysql-init`内にDB初期化用のSQLを配置してある。
 * 一回`docker-compose up`後、`mysql-local-data`内にMySQLのデータが保持される。
+
+とりあえず中身が見たい時、↓でコンテナに入って、
+```
+docker exec -it docker_mysql_1 bash
+```
+コンテナ内で
+```
+mysql -u root -ppassword
+```
