@@ -1,3 +1,4 @@
 requests
 dataset
-mysqlclient # driver for dataset
+mysqlclient===1.4.6 # driver for dataset
+mysql-connector-python

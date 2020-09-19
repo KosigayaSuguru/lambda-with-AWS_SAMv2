@@ -77,16 +77,31 @@ Resources:
         - !Ref LogicLayer
         - !Ref LibraryLayer
 
-  DBFunction:
+  DBFunctionDataset:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      CodeUri: src/lambda_functions/function_db
+      CodeUri: src/lambda_functions/function_db_dataset
       Handler: fn.app.lambda_handler
       Events:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /db
+            Path: /db_dataset
+            Method: get
+      Layers:
+        - !Ref LogicLayer
+        - !Ref LibraryLayer
+
+  DBFunctionMySQLConnector:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: src/lambda_functions/function_db_mysql_connector
+      Handler: fn.app.lambda_handler
+      Events:
+        HelloWorld:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /db_mysql_connector
             Method: get
       Layers:
         - !Ref LogicLayer
