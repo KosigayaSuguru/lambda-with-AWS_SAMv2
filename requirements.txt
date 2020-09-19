@@ -1,1 +1,3 @@
 requests
+dataset
+mysqlclient # driver for dataset

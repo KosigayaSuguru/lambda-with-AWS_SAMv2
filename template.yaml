@@ -9,7 +9,7 @@ Description: >
 Globals:
   Function:
     Timeout: 900
-    Runtime: python3.7
+    Runtime: python3.8
 
 Resources:
   LogicLayer:
@@ -20,7 +20,7 @@ Resources:
       ContentUri: src/layer
       RetentionPolicy: Retain
       CompatibleRuntimes:
-        - python3.7
+        - python3.8
 
   LibraryLayer:
     Type: AWS::Serverless::LayerVersion
@@ -30,7 +30,7 @@ Resources:
       ContentUri: venv/Lib/site-packages
       RetentionPolicy: Retain
       CompatibleRuntimes:
-        - python3.7
+        - python3.8
 
   Hello1Function:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
@@ -72,6 +72,21 @@ Resources:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
             Path: /world1
+            Method: get
+      Layers:
+        - !Ref LogicLayer
+        - !Ref LibraryLayer
+
+  DBFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: src/lambda_functions/function_db
+      Handler: fn.app.lambda_handler
+      Events:
+        HelloWorld:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /db
             Method: get
       Layers:
         - !Ref LogicLayer
