@@ -1,0 +1,27 @@
+{
+    // サイドのファイル表示制御
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true
+    },
+    // interpreterの設定
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    // linterの設定（pycodestyle=pep8）
+    "python.linting.pylintEnabled": false,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E402", // importがファイルの先頭になるとエラー
+        "--ignore=E501", // 79文字以上でエラー
+    ],
+    // formatterの設定（pycodestyle=pep8）
+    "editor.formatOnSave": true,
+    "python.formatting.autopep8Args": [
+        "--ignore=E402", // importがファイルの先頭になるとエラー
+        "--ignore=E501", // 79文字以上でエラー
+    ],
+}
