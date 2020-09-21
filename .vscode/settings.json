@@ -10,7 +10,7 @@
         "**/.DS_Store": true,
         "**/__pycache__": true
     },
-    // interpreterの設定
+    // interpreterの設定 ※Linux上で使用する場合、パスセパレータを\\→/へ変更すること
     "python.pythonPath": "venv\\Scripts\\python.exe",
     // VSCodeが読み込むenvファイル
     "python.envFile": "${workspaceFolder}/.vscode/.env",
@@ -18,20 +18,20 @@
     "python.autoComplete.extraPaths": [
         "${workspaceFolder}/src/lambda_functions",
         "${workspaceFolder}/src/layer/python",
-        "${workspaceFolder}/run_local",
+        "${workspaceFolder}/src_local",
     ],
     // linterの設定（pycodestyle=pep8）
     "python.linting.pylintEnabled": false,
     "python.linting.pycodestyleEnabled": true,
     "python.linting.enabled": true,
     "python.linting.pycodestyleArgs": [
-        "--ignore=E402", // importがファイルの先頭になるとエラー
+        "--ignore=E402", // importがファイルの先頭にないとエラー
         "--ignore=E501", // 79文字以上でエラー
     ],
     // formatterの設定（pycodestyle=pep8）
     "editor.formatOnSave": true,
     "python.formatting.autopep8Args": [
-        "--ignore=E402", // importがファイルの先頭になるとエラー
+        "--ignore=E402", // importがファイルの先頭にないとエラー
         "--ignore=E501", // 79文字以上でエラー
     ],
 }

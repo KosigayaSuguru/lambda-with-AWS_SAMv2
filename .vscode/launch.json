@@ -5,10 +5,18 @@
         {
             "name": "Python: Current File",
             "type": "python",
-            "request": "launch",
-            "env": {
-                "PYTHONPATH": "${workspaceFolder}/src/lambda_functions:${workspaceFolder}/src/layer/python",
+            "windows": {
+                "env": {
+                    "PYTHONPATH": ".\\src\\lambda_functions;.\\src\\layer\\python",
+                }
             },
+            "linux": {
+                "env": {
+                    "PYTHONPATH": "./src/lambda_functions:./src/layer/python",
+                }
+            },
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
             "program": "${file}",
             "console": "integratedTerminal"
         }
