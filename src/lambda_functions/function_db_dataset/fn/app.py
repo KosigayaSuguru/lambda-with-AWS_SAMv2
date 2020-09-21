@@ -4,6 +4,7 @@ import sys
 # 以降、レイヤー用のimport（環境変数のPYTHONPATHに/optを通す方がスマートだけど。。）
 sys.path.append('/opt')  # nopep8
 
+
 def lambda_handler(event, context):
 
     import threading
