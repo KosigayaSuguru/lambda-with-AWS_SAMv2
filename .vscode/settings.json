@@ -1,4 +1,6 @@
 {
+    // サイドのインデント幅
+    "workbench.tree.indent": 24,
     // サイドのファイル表示制御
     "files.exclude": {
         "**/.git": true,
@@ -10,6 +12,14 @@
     },
     // interpreterの設定
     "python.pythonPath": "venv\\Scripts\\python.exe",
+    // VSCodeが読み込むenvファイル
+    "python.envFile": "${workspaceFolder}/.vscode/.env",
+    // 自動補完の追加
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/src/lambda_functions",
+        "${workspaceFolder}/src/layer/python",
+        "${workspaceFolder}/run_local",
+    ],
     // linterの設定（pycodestyle=pep8）
     "python.linting.pylintEnabled": false,
     "python.linting.pycodestyleEnabled": true,

@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // Pythonファイルに対してF5で実行掛けた時のデフォルト設定
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src/lambda_functions:${workspaceFolder}/src/layer/python",
+            },
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
