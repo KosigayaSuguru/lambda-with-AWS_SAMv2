@@ -63,3 +63,16 @@ docker exec -it docker_mysql_1 bash
 ```
 mysql -u root -ppassword
 ```
+
+## トラブルシューティング
+
+### Linux上でMySQLアクセス時にエラーが出る場合
+
+とりあえず↓を実行する。  
+https://qiita.com/k_hoso/items/578503e10b2bbbcc9c1c
+
+### Lambda上で動作させるためには
+
+↓参照。  
+https://qiita.com/k_hoso/items/6bab9eb288cba01cdb18
+
