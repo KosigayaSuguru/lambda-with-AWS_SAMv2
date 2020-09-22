@@ -64,6 +64,10 @@ docker exec -it docker_mysql_1 bash
 mysql -u root -ppassword
 ```
 
+## VSCode+Remote-SSHの設定方法
+
+wiki 参照
+
 ## トラブルシューティング
 
 ### Linux上でMySQLアクセス時にエラーが出る場合
