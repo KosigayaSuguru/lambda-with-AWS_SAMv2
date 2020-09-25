@@ -1,0 +1,1 @@
+while :; do  mysql -u root -ppassword -h 127.0.0.1 -D hoge -e "show processlist \g"; sleep 1; done
