@@ -1,0 +1,1 @@
+while :; do  clear; ps -efL | grep python; sleep 1; done
