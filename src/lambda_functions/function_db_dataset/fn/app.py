@@ -12,7 +12,7 @@ def lambda_handler(event, context):
     # スレッドでSQL実行
     thread_run_exec_dataset(10)
 
-    # # 普通にSQL実行
+    # 普通にSQL実行
     # exec_dataset()
 
     close_and_monitor(con)
@@ -21,7 +21,7 @@ def lambda_handler(event, context):
     # スレッドでSQL実行
     thread_run_exec_dataset(10)
 
-    # # 普通にSQL実行
+    # 普通にSQL実行
     # exec_dataset()
 
     close_and_monitor(con)
@@ -46,7 +46,7 @@ def exec_dataset():
 
     for record in results:
         print(record['cnt'])
-    # con.close()  # conをclose()すると動かなくなる。。
+    # print(f"con.engine.pool.status()  : {con.engine.pool.status()}")
 
 
 def thread_run_exec_dataset(threads):
