@@ -14,6 +14,7 @@ con = dataset.connect(
         'max_overflow': 0,  # 0以外を指定すると、pool_sizeを超えてくるので注意
         # 'pool_recycle': 2,
         # 'echo': True,
+        # 'echo_pool': True,
         # 'pool_pre_ping': True,
     }
 )
