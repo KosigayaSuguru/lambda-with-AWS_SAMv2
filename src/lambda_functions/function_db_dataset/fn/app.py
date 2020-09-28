@@ -39,8 +39,7 @@ def exec_dataset():
     from .db import con
     results = con.query(
         'select count(*) as cnt from ' +
-        'test1 as t1, test1 as t2, test1 as t3, test1 as t4, test1 as t5, ' +
-        'test1 as t6, test1 as t7, test1 as t8, ' +
+        'test1 as t1, test1 as t2, test1 as t3, ' +
         'test1 as t100;'
     )
 
