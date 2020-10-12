@@ -13,3 +13,4 @@ services:
         - ./mysql-init:/docker-entrypoint-initdb.d
         - ./mysql-local-data:/var/lib/mysql
         - ./mysql-conf:/etc/mysql/conf.d/
+        - ./mysql-log:/tmp/mysql-log
