@@ -7,7 +7,7 @@ import dataset
 from sqlalchemy.pool import NullPool
 
 con = dataset.connect(
-    'mysql://root:password@172.17.0.1:3306/hoge',
+    'mysql://root:password@172.17.0.1:3306/hoge?charset=utf8mb4',
     engine_kwargs={
         # 'poolclass': NullPool, # コネクションプールを使いたくない時
         'pool_size': 10,
